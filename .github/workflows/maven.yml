@@ -5,7 +5,7 @@ name: Selenium Automation
 
 on:
   push:
-    branches: 
+    branches:
       - ci
   pull_request:
     branches: [ master ]
@@ -21,7 +21,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Run Acceptance test
+    - name: Run acceptance tests
       env:
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
         SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
